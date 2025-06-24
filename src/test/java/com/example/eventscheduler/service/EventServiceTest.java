@@ -37,7 +37,6 @@ class EventServiceTest {
     void setup() {
         // Initialize mocks for each test run
         eventRepository = mock(EventRepository.class);
-        notificationService = mock(NotificationService.class);
 
         // For ClockService and SystemClock, create real instances but with a fixed Clock
         // This simulates a "frozen clock" for predictable time-dependent tests

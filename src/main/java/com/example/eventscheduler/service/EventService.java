@@ -65,7 +65,7 @@ public class EventService {
      */
     @Transactional(readOnly = true)
     public List<Event> getDueEvents() {
-        Instant now = clockService.now();
+        Instant now = Instant.now();
         return eventRepository.findByStatusAndScheduledTimeBefore(EventStatus.SCHEDULED.name(), now);
     }
 
