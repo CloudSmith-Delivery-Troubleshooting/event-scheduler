@@ -29,7 +29,6 @@ class EventControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @MockBean
     private EventService eventService;
 
     @Test

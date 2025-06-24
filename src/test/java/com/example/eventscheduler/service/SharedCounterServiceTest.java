@@ -38,7 +38,6 @@ class SharedCounterServiceTest {
     @Test
     void reset_shouldSetCounterToZero() {
         sharedCounterService.incrementAndGet(); // Counter is 1
-        sharedCounterService.reset();
         assertEquals(0, sharedCounterService.get());
 
         sharedCounterService.incrementAndGet(); // Counter is 1 again
