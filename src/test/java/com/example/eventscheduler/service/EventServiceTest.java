@@ -48,7 +48,7 @@ class EventServiceTest {
         // For SharedCounterService, use a real instance to test its state changes,
         // and reset it before each test to ensure test isolation.
         sharedCounterService = new SharedCounterService();
-        sharedCounterService.reset(); // Important: Reset for each test to avoid flaky tests
+        sharedCounterService.reset();
 
         // Initialize the service with its mocked and real (controlled) dependencies
         eventService = new EventService(eventRepository, clockService, notificationService, sharedCounterService);
