@@ -54,8 +54,8 @@ public class EventService {
                 .scheduledTime(scheduledTime)
                 .status(EventStatus.SCHEDULED)
                 .build();
-        Event saved = eventRepository.save(event); // JpaRepository's save method
-        sharedCounterService.incrementAndGet(); // Simulate shared state interaction
+        Event saved = eventRepository.save(event);
+        sharedCounterService.incrementAndGet();
         return saved;
     }
 
@@ -65,7 +65,7 @@ public class EventService {
      */
     @Transactional(readOnly = true)
     public List<Event> getDueEvents() {
-        Instant now = clockService.now(); // Get current time from the abstracted clock
+        Instant now = clockService.now();
         return eventRepository.findByStatusAndScheduledTimeBefore(EventStatus.SCHEDULED.name(), now);
     }
 
@@ -76,10 +76,10 @@ public class EventService {
      */
     @Transactional
     public void completeEvent(Long eventId) {
-        Event event = eventRepository.findById(eventId) // JpaRepository's findById method
+        Event event = eventRepository.findById(eventId)
                 .orElseThrow(() -> new EventNotFoundException(eventId));
         event.setStatus(EventStatus.COMPLETED);
-        eventRepository.save(event); // JpaRepository's save method to update status
-        notificationService.notifyUser("Event completed: " + event.getName()); // Simulate external call
+        eventRepository.save(event);
+        notificationService.notifyUser("Event completed: " + event.getName());
     }
 }

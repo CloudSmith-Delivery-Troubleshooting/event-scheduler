@@ -95,7 +95,6 @@ class EventControllerTest {
     void testCompleteEventSuccess() throws Exception {
         Long eventId = 1L;
 
-        // completeEvent returns void, so just verify invocation
         doNothing().when(eventService).completeEvent(eventId);
 
         mockMvc.perform(post("/api/events/{id}/complete", eventId)

@@ -15,11 +15,9 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     public void notifyUser(String message) {
-        // Simulate network call delay
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
-            // Restore the interrupted status
             Thread.currentThread().interrupt();
             logger.warn("Notification service thread interrupted during delay.", e);
         }

@@ -25,10 +25,4 @@ public class ScheduledTasks {
     public void reportCurrentTime() {
         logger.info("Scheduled Task - Current time: {}", Instant.now());
     }
-
-    // You can add more scheduled methods here, e.g., with cron expressions or fixedDelay
-    // @Scheduled(cron = "0 0 10 * * ?") // Every day at 10 AM
-    // public void dailyReport() {
-    //    logger.info("Running daily report at {}", Instant.now());
-    // }
 }
