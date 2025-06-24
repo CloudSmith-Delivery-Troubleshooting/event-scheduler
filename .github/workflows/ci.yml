@@ -1,10 +1,11 @@
 name: Java CI
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ unit-test-time-scenario, unit-test-missing-beans ]
   pull_request:
-    branches: [ main ]
+    branches: [ unit-test-time-scenario, unit-test-missing-beans ]
 
 jobs:
   build:
