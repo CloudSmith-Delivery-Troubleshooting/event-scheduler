@@ -10,5 +10,5 @@ public interface NotificationService {
      * Sends a notification with the given message.
      * @param message The message to send.
      */
-    void notifyUser(String message);
+    void notifyUser(message);
 }
