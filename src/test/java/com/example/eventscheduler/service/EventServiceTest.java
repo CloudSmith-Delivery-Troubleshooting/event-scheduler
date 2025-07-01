@@ -7,7 +7,6 @@ import com.example.eventscheduler.repository.EventRepository;
 import com.example.eventscheduler.util.SystemClock;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
 
 import java.time.Clock;
 import java.time.Instant;
