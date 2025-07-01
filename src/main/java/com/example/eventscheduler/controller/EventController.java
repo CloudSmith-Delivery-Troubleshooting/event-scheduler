@@ -55,7 +55,7 @@ public class EventController {
      * @return ResponseEntity with no content (200 OK).
      */
     @PostMapping("/{id}/complete")
-    public ResponseEntity<Void> completeEvent(@PathVariable Long id) {
+    public ResponseEntity<Void> CompleteEvent(@PathVariable Long id) {
         eventService.completeEvent(id);
         return ResponseEntity.ok().build();
     }

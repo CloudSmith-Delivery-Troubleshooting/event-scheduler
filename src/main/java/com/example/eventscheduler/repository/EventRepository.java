@@ -13,8 +13,7 @@ import java.util.List;
 public interface EventRepository extends JpaRepository<Event, Long> {
 
     /**
-     * Finds events by their status and scheduled time before a given instant.
-     * This method demonstrates Spring Data JPA's query derivation.
+     * Finds events by their status and scheduled time before a given instant. This method demonstrates Spring Data JPA's query derivation.
      * @param status The status of the events to find (e.g., "SCHEDULED").
      * @param time The instant before which events should be scheduled.
      * @return A list of matching events.
