@@ -3,9 +3,9 @@ name: Java CI Test Coverage
 on:
   workflow_dispatch:
   push:
-    branches: [ ci-test-coverage ]
+    branches: [ ci-unit-test-coverage ]
   pull_request:
-    branches: [ ci-test-coverage ]
+    branches: [ ci-unit-test-coverage ]
 
 jobs:
   build:
